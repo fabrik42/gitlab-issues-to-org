@@ -1,0 +1,21 @@
+* Synopsis
+This is a Ruby script that downloads all open issues from GitLab projects and converts them to an org-mode file. This can be useful e.g. to view have tickets listen in an =org-agenda=.
+
+Since a lot of org mode users have very distinct workflows this is not a library yet, but can serve as a starting point to build your own workflow.
+* Features
+- Download issues from multiple projects in one single =.org= file
+- Templating for the org file and the single entries
+- Org file is read-only by default to prevent accidental edits
+* ToDos
+- Figure out how to run the script on a regular basis
+* Installation/Usage
+** GitLab Tokens
+In order to use the script, you need to create an access token that has the proper permissions.
+** Script
+You will need to set these environment variables:
+
+- =GITLAB_TO_ORG_OUTPUT= the path to the output org file (which will be overwritten).
+- =GITLAB_TO_ORG_PROJECT_IDS= the ids of the GitLab projects to download the issues from, comma separated.
+- =GITLAB_TO_ORG_API_URL= The base URL pointing to your GitLab instance.
+- =GITLAB_TO_ORG_API_TOKEN= The access token to be used with the GitLab API.
+- =GITLAB_SELF_USER= Your own GitLab user name.
